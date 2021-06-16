@@ -31,7 +31,7 @@ struct map_session_data;
 struct questinfo;
 struct mob_data;
 
-#define MAX_QUEST_DB (60355+1) // Highest quest ID + 1
+#define MAX_QUEST_DB 70000 // Highest quest ID + 1
 #define QUEST_MAPWIDE_ID 10363 // MobId handled by the client to display MapName
 #define QUEST_MOBTYPE_ID 31999 // MobId handled by the client to display Mob properties
 

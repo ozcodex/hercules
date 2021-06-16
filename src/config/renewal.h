@@ -97,7 +97,7 @@
 /// - AGI has a greater factor in ASPD increase
 /// - there is a change in how skills/items give ASPD
 /// - some skill/item ASPD bonuses won't stack
-#define RENEWAL_ASPD
+/// #define RENEWAL_ASPD
 
 #endif // DISABLE_RENEWAL
 #undef DISABLE_RENEWAL
