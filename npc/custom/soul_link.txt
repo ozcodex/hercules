@@ -1,0 +1,86 @@
+prontera,161,185,4	script	Linker	4_M_ROTERT,{
+
+	.@name$ = "[ ^0000FFLinker^000000 ]";
+	.@Duration = 300000; // Buff duration (ms)
+	.@Price = 50000; // Price in zeny
+
+	mes(.@name$);
+	mesf("Hello %s, do", strcharinfo(PC_NAME));
+	mes("you want me to Soul Link you?");
+	next();
+	if (select("Yes", "No") == 2) {
+		mes(.@name$);
+		mes("Okay, goodbye!");
+		close();
+	}
+	if (Zeny < .@Price) {
+		mes(.@name$);
+		mes("You need 50,000 Zeny for a Soul Link.");
+		close();
+	}
+
+	Zeny -= .@Price;
+	switch (BaseJob) {
+	case Job_Alchemist:
+		.@Spirit = SL_ALCHEMIST;
+		break;
+	case Job_Monk:
+		.@Spirit = SL_MONK;
+		break;
+	case Job_Star_Gladiator:
+		.@Spirit = SL_STAR;
+		break;
+	case Job_Sage:
+		.@Spirit = SL_SAGE;
+		break;
+	case Job_Crusader:
+		.@Spirit = SL_CRUSADER;
+		break;
+	case Job_SuperNovice:
+		.@Spirit = SL_SUPERNOVICE;
+		break;
+	case Job_Knight:
+		.@Spirit = SL_KNIGHT;
+		break;
+	case Job_Wizard:
+		.@Spirit = SL_WIZARD;
+		break;
+	case Job_Priest:
+		.@Spirit = SL_PRIEST;
+		break;
+	case Job_Bard:
+	case Job_Dancer:
+		.@Spirit = SL_BARDDANCER;
+		break;
+	case Job_Rogue:
+		.@Spirit = SL_ROGUE;
+		break;
+	case Job_Assassin:
+		.@Spirit = SL_ASSASIN;
+		break;
+	case Job_Blacksmith:
+		.@Spirit = SL_BLACKSMITH;
+		break;
+	case Job_Hunter:
+		.@Spirit = SL_HUNTER;
+		break;
+	case Job_Soul_Linker:
+		.@Spirit = SL_SOULLINKER;
+		break;
+	default:
+		if (Upper == ITEMUPPER_UPPER && BaseLevel < 70)
+			.@Spirit = SL_HIGH;
+		else {
+			mes(.@name$);
+			mes("Unable to Soul Link.");
+			close();
+		}
+		break;
+	}
+
+	if (.@Spirit) {
+		sc_start2(SC_SOULLINK, .@Duration, 5, .@Spirit);
+		skilleffect(.@Spirit, 5);
+	}
+	close();
+}

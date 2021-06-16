@@ -1,0 +1,66 @@
+//===== Atlantis Script ======================================
+//= iRO Bounty Boards : Lighthalzen
+//===== By: ==================================================
+//= Ragno / AtlantisRO
+//===== Actual Version: ======================================
+//= 1.0 Starting Release
+//===== General Description: =================================
+//= Hunting Quest designed by iRO:
+//=    http://irowiki.org/wiki/Bounty_Board_Quests
+//===== How to Use: ==========================================
+//= Uses function "F_Bounty_Board" to manage the Bounty Boards
+//= npc on cities.
+//= The function arguments are this:
+//= 	callfunc "F_Bounty_Board", MinLevel, MaxLevel, MsgHuntPlace, MsgOutLevel,
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp{, 
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp};
+//============================================================
+
+lighthalzen,194,161,3	script	Bounty Board 81-100#lz1	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 81, 100, 9, 1,
+		METALING,			62745,	107325,		120825,
+		RAFFLESIA,			62746,	131625,		148050,
+		STEM_WORM,			62747,	121500,		136575,
+		BREEZE,				62748,	179775,		202050,
+		ANOPHELES,			62749,	190125,		213975;
+	end;
+}
+
+lighthalzen,192,161,3	script	Bounty Board 101-150#lz2	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 101, 150, 4, 1,
+		KOBOLD_1,			62750,	255825,		191925,
+		KOBOLD_2,			62751,	218700,		164025,
+		KOBOLD_3,			62752,	205425,		154125,
+		KOBOLD_ARCHER,		62753,	243000,		294750;
+	end;
+}
+
+lighthalzen,190,161,3	script	Bounty Board 121-175#lz3	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 121, 0, 10, 1,
+		REMOVAL,			62754,	424350,		318150,
+		RAWREL,				62755,	506250,		503550,
+		EREND,				62756,	546750,		511200,
+		ARMAIA,				62757,	550575,		552150,
+		WHIKEBAIN,			62758,	573075,		531000,
+		KAVAC,				62759,	573975,		481050,
+		YGNIZEM,			62760,	588510,		501750;
+	end;
+}
+
+lighthalzen,188,162,3	script	Bounty Board 141#lz4	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 141, 0, 1, 4,
+		KATRINN,			62761,	1516950,	1997550,
+		MAGALETA,			62762,	1736100,	1738912,
+		SHECIL,				62763,	1863225,	1861312,
+		EREMES,				62764,	1880325,	1993162,
+		SEYREN,				62765,	1996987,	2010825,
+		HARWORD,			62766,	1918687,	2022525,
+		TRENTINI,			62767,	1799325,	1490400,
+		CELIA,				62768,	2486925,	2139300,
+		ALPHOCCIO,			62769,	2496600,	2286225,
+		GERTIE,				62770,	2729925,	2276100,
+		CHEN,				62771,	2889450,	2228625,
+		FLAMEL,				62772,	2969550,	2596500,
+		RANDEL,				62773,	3641175,	2706075;
+	end;
+}

@@ -1,0 +1,42 @@
+//===== Atlantis Script ======================================
+//= iRO Bounty Boards : Hugel
+//===== By: ==================================================
+//= Ragno / AtlantisRO
+//===== Actual Version: ======================================
+//= 1.0 Starting Release
+//===== General Description: =================================
+//= Hunting Quest designed by iRO:
+//=    http://irowiki.org/wiki/Bounty_Board_Quests
+//===== How to Use: ==========================================
+//= Uses function "F_Bounty_Board" to manage the Bounty Boards
+//= npc on cities.
+//= The function arguments are this:
+//= 	callfunc "F_Bounty_Board", MinLevel, MaxLevel, MsgHuntPlace, MsgOutLevel,
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp{, 
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp};
+//============================================================
+
+hugel,67,153,3	script	Bounty Board 81-100#hu1	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 81, 100, 9, 1,
+		NOVUS,				62789,	146700,		169200,
+		NOVUS_,				62790,	121500,		136575;
+	end;
+}
+
+hugel,66,152,3	script	Bounty Board 101-150#hu2	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 101, 150, 4, 1,
+		ANCIENT_MIMIC,	62791,		275400,		232650,
+		DEATHWORD,		62792,		288450,		216225;
+	end;
+}
+
+hugel,65,151,3	script	Bounty Board 121-160#hu3	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 121, 160, 10, 1,
+		FERUS,			62793,		448312,		336262,
+		FERUS_,			62794,		470812,		336262,
+		SKOGUL,			62795,		481500,		386775,
+		FRUS,			62796,		513225,		402412,
+		ACIDUS_,		62798,		508500,		381262,
+		ACIDUS,			62799,		508500,		381262;
+	end;
+}

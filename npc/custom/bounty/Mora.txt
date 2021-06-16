@@ -1,0 +1,33 @@
+//===== Atlantis Script ======================================
+//= iRO Bounty Boards : Mora
+//===== By: ==================================================
+//= Ragno / AtlantisRO
+//===== Actual Version: ======================================
+//= 1.0 Starting Release
+//===== General Description: =================================
+//= Hunting Quest designed by iRO:
+//=    http://irowiki.org/wiki/Bounty_Board_Quests
+//===== How to Use: ==========================================
+//= Uses function "F_Bounty_Board" to manage the Bounty Boards
+//= npc on cities.
+//= The function arguments are this:
+//= 	callfunc "F_Bounty_Board", MinLevel, MaxLevel, MsgHuntPlace, MsgOutLevel,
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp{, 
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp};
+//============================================================
+
+mora,98,110,3	script	Bounty Board 141#mo1	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 141, 0, 1, 4,
+		MIMING,			62821,		798750,		708750,
+		LITTLE_FATUM,	62822,		843750,		731250,
+		CENERE,			62823,		800662,		848137,
+		MENBLATT,		62824,		466875,		461812,
+		PETAL,			62825,		456525,		378112,
+		ANGRA_MANTIS,	62826,		876375,		789750,
+		ANTIQUE_BOOK,	62827,		812812,		871650,
+		LICHTERN_Y,		62828,		795487,		862762,
+		LICHTERN_B,		62829,		808537,		846562,
+		LICHTERN_R,		62830,		810112,		892800,
+		LICHTERN_G,		62831,		811575,		847912;
+	end;
+}

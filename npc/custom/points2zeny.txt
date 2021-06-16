@@ -1,0 +1,160 @@
+/*=========================================================
+Points to Zeny Exchanger
+by Mumbles
+===========================================================
+Request: http://goo.gl/f0WfTF
+===========================================================
+Description:
+Allows players to exchange points for zeny and vice-versa.
+Point variable, exchange rate, and minimum exchange can be
+configured easily below the 'OnInit' label.
+===========================================================
+Compatibility:
+Optimised for Hercules emulators.
+===========================================================
+Changelog:
+v1.0 - First version.
+	v1.0.1 - Added changelog.
+=========================================================*/
+
+prontera,147,159,5	script	Points Exchanger::points2zeny	4_F_KHELLY,{
+	
+	/*-----------------------------------------------------
+	Function: isbigger()
+	-------------------------------------------------------
+	Description: Determine if first value is greater.
+	-------------------------------------------------------
+	Usage:
+	isbigger(<value>, <value2>);
+	-----------------------------------------------------*/
+	function isbigger {
+		if (getarg(0) < getarg(1)) {
+			return false;
+		}
+		
+		return true;
+	}
+
+	
+	/*-----------------------------------------------------
+	Script
+	-----------------------------------------------------*/
+	mes .npc_name$;
+	mes "Hello there, "+ strcharinfo(0) +"! What can I help you with?";
+	message strcharinfo(0), "You currently have "+ getd(.var_name$) +" points.";
+	next;
+	
+	menu "Exchange points for zeny:Exchange zeny for points:Nothing, never mind", -;
+	
+	mes .npc_name$;
+	switch (@menu) {
+		case 1:
+			mes "How many points would you like to exchange?";
+			message strcharinfo(0), "Exchange rate: "+ .exchange_rate +" zeny per point.";
+			next;
+			
+			do {
+				message strcharinfo(0), "Enter a value of "+ .exchange_min +" or greater.";
+				input .@points;
+			} while (.@points < .exchange_min);
+			
+			mes .npc_name$;
+			
+			// Insufficient funds
+			if (!isbigger(getd(.var_name$), .@points)) {
+				mes "Sorry, but you don't appear to have "+ .@points +" points at this time.";
+				close;
+			}
+			
+			.@payout = .@points * .exchange_rate;
+			
+			mes "I can give you "+ .@payout +" zeny for "+ .@points +" points. Is that okay?";
+			next;
+			
+			menu "Yes, that's fine:No, thanks", -;
+			
+			mes .npc_name$;
+			switch (@menu) {
+				case 1:
+					mes "Alright, here you go! Let me know if you need my services again!";
+					
+					// Update balance
+					Zeny += .@payout;
+					setd(.var_name$), getd(.var_name$) - .@points;
+					
+					message strcharinfo(0), "Balance updated. You now have "+ Zeny +" zeny and "+ getd(.var_name$) +" points.";
+					break;
+			
+				default:
+					mes "Okay, come back if you change your mind!";
+					break;
+			}
+			
+			break;
+			
+		case 2:
+			mes "How many points would you like?";
+			message strcharinfo(0), "Exchange rate: "+ .exchange_rate +" zeny per point.";
+			next;
+			
+			do {
+				message strcharinfo(0), "Enter a value of "+ .exchange_min +" or greater.";
+				input .@points;
+			} while (.@points < .exchange_min);
+			
+			.@cost = .@points * .exchange_rate;
+			
+			mes .npc_name$;
+			
+			// Insufficient funds
+			if (!isbigger(Zeny, .@cost)) {
+				mes "Sorry, but you don't have enough zeny for "+ .@points +" point(s).";
+				break;
+			}
+			
+			mes "I can give you "+ .@points +" points for "+ .@cost +" zeny. Is that okay?";
+			next;
+			
+			menu "Yes, that's fine:No, thanks", -;
+			
+			mes .npc_name$;
+			switch (@menu) {
+				case 1:
+					mes "Alright, here you go! Let me know if you need my services again!";
+					
+					// Update balance
+					Zeny -= .@cost;
+					setd(.var_name$), getd(.var_name$) + .@points;
+					
+					message strcharinfo(0), "Balance updated. You now have "+ getd(.var_name$) +" points and "+ Zeny +" zeny.";
+					break;
+			
+				default:
+					mes "Okay, come back if you change your mind!";
+					break;
+			}
+			
+			break;
+			
+		default:
+			mes "Okay, let me know if you need my services!";
+			break;
+	}
+	
+	close;
+	
+
+	/*-----------------------------------------------------
+	Configuration
+	-----------------------------------------------------*/
+	OnInit:
+		.npc_name$ = "[^0000FFPoint Exchanger^000000]";
+		.var_name$ = "#CASHPOINTS";	// Point variable name
+		.exchange_rate = 20000;		// Amount of zeny to exchange per point
+		.exchange_min = 10;			// Minimum points required to exchange
+		
+		// Pub title
+		waitingroom strnpcinfo(1), 0;
+		end;
+
+}

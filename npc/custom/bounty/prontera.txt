@@ -1,0 +1,65 @@
+//===== Atlantis Script ======================================
+//= iRO Bounty Boards : Prontera
+//===== By: ==================================================
+//= Ragno / AtlantisRO
+//===== Actual Version: ======================================
+//= 1.0 Starting Release
+//===== General Description: =================================
+//= Hunting Quest designed by iRO:
+//=    http://irowiki.org/wiki/Bounty_Board_Quests
+//===== How to Use: ==========================================
+//= Uses function "F_Bounty_Board" to manage the Bounty Boards
+//= npc on cities.
+//= The function arguments are this:
+//= 	callfunc "F_Bounty_Board", MinLevel, MaxLevel, MsgHuntPlace, MsgOutLevel,
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp{, 
+//=			MonsterID, 		QuestID, 	BaseExp, 	JobExp};
+//============================================================
+
+prontera,136,225,3	script	Bounty Board 1-20#prt1	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 1, 20, 3, 1,
+		HORNET,				62722,	 9000,		 6750,
+		RODA_FROG,			62723,	10125,		 7650,
+		ROCKER,				62724,	11025,		 8325,
+		SAVAGE_BABE,		62725,	10125,		 7650,
+		THIEF_BUG_EGG,		62726,	14175,		15975,
+		LUNATIC,			62816,	 5400,		 3900,
+		AMBERNITE,			62817,	13050,		 9675;
+	end;
+}
+
+prontera,138,227,3	script	Bounty Board 21-50#prt2	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 21, 50, 4, 1,
+		THIEF_BUG,			62727,	14175,		15975,
+		TAROU,				62728,	15075,		17100,
+		STAINER,			62729,	14175,		15975,
+		PECOPECO,			62730,	18225,		20475,
+		COCO,				62731,	30375,		34200,
+		YOYO,				62732,	30375,		34200,
+		THIEF_BUG_,			62733,	20250,		22725,
+		THIEF_BUG__,		62734,	22275,		25200,
+		POPORING,			62735,	22275,		25200,
+		ELDER_WILOW,		62736,	26100,		29475,
+		MUKA,				62818,	12150,		27337;
+	end;
+}
+
+prontera,140,229,3	script	Bounty Board 41-70#prt3	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 41, 70, 4, 1,
+		ARGOS,				62737,	40500,		45450,
+		KIND_OF_BEETLE,		62738,	50625,		56925,
+		SAVAGE,				62739,	64350,		72450,
+		MAGNOLIA,			62819,	49500,		55575;
+	end;
+}
+
+prontera,142,231,3	script	Bounty Board 61-100#prt4	2_BULLETIN_BOARD,{
+	callfunc "F_Bounty_Board", 61, 100, 4, 1,
+		DRILLER,			62740,	 66825,		 75150,
+		HUNTER_FLY,			62741,	 67950,		 76500,
+		MANTIS,				62742,	 66825,		 75263,
+		SIDE_WINDER,		62743,	162000,		182250,
+		ARGIOPE,			62744,	 91125,		102600;
+	end;
+}
+

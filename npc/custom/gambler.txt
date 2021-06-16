@@ -1,0 +1,72 @@
+/*=========================================================
+Item Gambler
+by Ozcodex
+===========================================================
+Description:
+Exchanges one item for random items from list
+===========================================================
+Compatibility:
+Optimised for Hercules emulators.
+===========================================================
+Changelog:
+v1.0 - First version.
+=========================================================*/
+
+prontera,164,169,3	script	Gambler	1_M_SMITH,{
+	
+	/*-----------------------------------------------------
+	Script
+	-----------------------------------------------------*/
+	mes .npc_name$;
+	mes "Hello there, ^FF8800"+ strcharinfo(0) +"^000000! "+
+		"Would you exchange your "+ .pod_name$ +" "+
+		"for some random goods?";
+	next;
+	
+	switch (select("Sure!","Nah!")) {
+		case 1:
+			mes .npc_name$;
+			// Check total against inventory
+			if (countitem(.pod_id) < 1) {
+				mes "You don't have enough "+.pod_name$;
+			}
+			.@chance = rand(1,100);
+			.@reward = .pod_id;
+			if (.@chance <= 70){
+				.@reward = .rewards_class_c[(rand(5))];
+			}else if(.@chance<85){
+				.@reward = .rewards_class_b[(rand(5))];
+			}else if(.@chance<95){
+				.@reward = .rewards_class_a[(rand(5))];
+			}else{
+				.@reward = .rewards_class_s[(rand(5))];
+			}
+			delitem .pod_id, 1;
+			getitem .@reward,1;
+			mes "You've exchanged your" + .pod_name$ +" for some stuff";
+			break;	
+
+		case 2:
+			mes .npc_name$;
+			mes "Okay, come back if you change your mind!";
+			break;	
+			
+		}
+		
+		close;
+	
+	
+	/*-----------------------------------------------------
+	Configuration
+	-----------------------------------------------------*/
+	OnInit:
+		.npc_name$ = "[^0000FFGambler^000000]";
+		.pod_id = 7863;
+		.pod_name$ = getitemname(.pod_id) +"(s)";
+		setarray .rewards_class_c[0],756,757,756,757,7049;
+		setarray .rewards_class_b[0],969,969,7444,6635,6635;
+		setarray .rewards_class_a[0],6457,6456,6231,6235,6635;
+		setarray .rewards_class_s[0],6234,6230,6233,6229,6635;
+		end;
+	
+}
