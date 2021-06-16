@@ -32,7 +32,7 @@
 //= 1.0
 //=========================================================================
 
-prt_fild04,356,148,3	script	Laertes#Creamy_Hunt	4_M_NFMAN,{
+gef_fild05,355,317,3	script	Laertes#Creamy_Hunt	4_M_NFMAN,{
 	if (questprogress(60122)) {
 		if (questprogress(60122,HUNTING) != 2) {
 			mes "[Laertes]";

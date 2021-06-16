@@ -93,10 +93,10 @@ prontera,115,90,0	script	Putty	4_F_01,{
 				mes "The points can be used to exchange for items that I have.";
 				next;
 				mes "[Putty]";
-				mes "For ^CC0000100 points^000000: ^0000CC1 Old Card Album^000000.";
-				mes "For ^CC000050 points^000000: ^0000CC20 Yggdrasil Berry^000000.";
-				mes "For ^CC000020 points^000000: ^0000CC10 Blue Potion^000000.";
-				mes "For ^CC00001 point^000000: ^0000CC4 Honey^000000.";
+				mes "For ^CC000020 points^000000: ^0000CC2 Old Card Albums^000000.";
+				mes "For ^CC000010 points^000000: ^0000CC5 Yggdrasil Berry^000000.";
+				mes "For ^CC00005 points^000000: ^0000CC1 Battle Manual^000000.";
+				mes "For ^CC00001 point^000000: ^0000CC3 Speed Potion^000000.";
 				next;
 			break;
 			case 2:
@@ -162,40 +162,39 @@ prontera,115,90,0	script	Putty	4_F_01,{
 				mes "[Putty]";
 				mes "These are the items that I have.";
 				next;
-				switch(select("1 Old Card Album - 50 Points","20 Yggdrasil Berry - 50 Points","10 Blue Potion - 20 Points","4 Honey - 1 Point","^777777Nerver mind.^000000")) {
+				switch(select("2 Old Card Album - 20 Points","5 Yggdrasil Berry - 10 Points","Battle Manual - 5 Points","3 Speed Potion - 1 Point","^777777Nerver mind.^000000")) {
 					case 1:
-						if (.@points < 100) break;
+						if (.@points < 20) break;
 						mes "[Putty]";
 						mes "Great, I wish you the best";
-						mes "of luck with this album. I have a";
+						mes "of luck with this albums. I have a";
 						mes "very good feeling about this one!";
-						oversea_event9 = .@points - 100;
-						getitem 616,1;
+						oversea_event9 = .@points - 20;
+						getitem 616,2;
 						close;
 					case 2:
-						if (.@points < 50) break;
+						if (.@points < 10) break;
 						mes "[Putty]";
 						mes "Oh, you must like adventures.";
 						mes "Here you go, just what you need!";
-						oversea_event9 = .@points - 50;
-						getitem 607,20;
+						oversea_event9 = .@points - 10;
+						getitem 607,5;
 						close;
 					case 3:
-						if (.@points < 20) break;
+						if (.@points < 5) break;
 						mes "[Putty]";
-						mes "Blue Potions? Are you sure?";
+						mes "Battle Manual? Are you sure?";
 						mes "If that's what you want, here they are!";
-						oversea_event9 = .@points - 20;
-						getitem 505,10;
+						oversea_event9 = .@points - 5;
+						getitem 12208,1;
 						close;
 					case 4:
 						if (.@points < 1) break;
 						mes "[Putty]";
-						mes "It took many bees";
-						mes "to make all of this.";
+						mes "Did you like the speed?";
 						mes "Make good use of it.";
 						oversea_event9 = .@points - 1;
-						getitem 518,4;
+						getitem 12016,3;
 						close;
 					case 5:
 						mes "[Putty]";
