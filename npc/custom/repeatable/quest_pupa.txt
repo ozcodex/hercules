@@ -32,7 +32,7 @@
 //= 1.0
 //=========================================================================
 
-gef_fild04,191,54,3	script	Halgus#Pupa_Hunt	2_F_MAGICMASTER,{
+gef_fild07,320,195,3	script	Halgus#Pupa_Hunt	2_F_MAGICMASTER,{
 	if (questprogress(60110)) {
 		if (questprogress(60110,HUNTING) != 2) {
 			mes "[Halgus]";

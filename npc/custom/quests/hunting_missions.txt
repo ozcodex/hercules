@@ -296,7 +296,7 @@ OnNPCKillEvent:
 	end;
 
 OnInit:
-	set .Delay,12;		// Quest delay, in hours (0 to disable).
+	set .Delay,1;		// Quest delay, in hours (0 to disable).
 	set .Quests,4;		// Number of subquests per mission (increases rewards).
 	set .Party,2;		// Party options: 0 (exclude party kills), 1 (include party kills), 2 (same map only), 3 (screen area only)
 	set .Reset,10000;	// Reset options: -1 (abandoning mission sets delay time), 0 (no delay time), [Zeny] (cost to abandon mission, no delay time)
@@ -305,7 +305,17 @@ OnInit:
 	setarray .Modifier[0],	// Multipliers for Base Exp, Job Exp, and Zeny rewards.
 		getbattleflag("base_exp_rate")/100,getbattleflag("job_exp_rate")/100,60;
 	setarray .Shop[0],	// Reward items: <ID>,<point cost> (about 10~20 points per hunt).
-		673,10,675,30,671,50;
+		5315,50, //observer
+		5312,100, //ayotaya kings
+		18520,100, //hati crown
+		5283,150, //chick hat
+		5211,150, //dress hat
+		5815,200, //classic hat
+		5360,200, //hykes black cat ears
+		18597,300, //mercury riser
+		18508,300, //garuda hat
+		18522,500, //evil marching hat
+		5490,500; //anubis helm
 	set .Blacklist$,	// Blacklisted mob IDs.
 		"1062,1088,1183,1186,1200,1212,1220,1221,1234,1235,"+
 		"1244,1245,1250,1268,1290,1293,1294,1296,1298,1299,"+

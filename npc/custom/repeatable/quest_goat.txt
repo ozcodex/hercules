@@ -32,7 +32,7 @@
 //= 1.0
 //=========================================================================
 
-ein_fild06,82,171,0	script	Vegetable Farmer#Goat	4_F_SHABBY,{
+yuno_fild11,356,356,0	script	Vegetable Farmer#Goat	4_F_SHABBY,{
 	if (questprogress(60137)) {
 		if (questprogress(60137,HUNTING) != 2) {
 			mes "[Vegetable Farmer]";
