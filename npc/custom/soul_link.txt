@@ -1,8 +1,8 @@
-prontera,161,185,4	script	Linker	4_M_ROTERT,{
+prontera,161,185,4	script	Kessinger	4_M_ROTERT,{
 
-	.@name$ = "[ ^0000FFLinker^000000 ]";
+	.@name$ = "[ ^0000FFKessinger^000000 ]";
 	.@Duration = 300000; // Buff duration (ms)
-	.@Price = 50000; // Price in zeny
+	.@Price = 10000; // Price in zeny
 
 	mes(.@name$);
 	mesf("Hello %s, do", strcharinfo(PC_NAME));

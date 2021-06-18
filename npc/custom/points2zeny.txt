@@ -17,7 +17,7 @@ v1.0 - First version.
 	v1.0.1 - Added changelog.
 =========================================================*/
 
-prontera,147,159,5	script	Points Exchanger::points2zeny	4_F_KHELLY,{
+prontera,147,159,5	script	Sophie	4_F_KHELLY,{
 	
 	/*-----------------------------------------------------
 	Function: isbigger()
@@ -148,13 +148,13 @@ prontera,147,159,5	script	Points Exchanger::points2zeny	4_F_KHELLY,{
 	Configuration
 	-----------------------------------------------------*/
 	OnInit:
-		.npc_name$ = "[^0000FFPoint Exchanger^000000]";
+		.npc_name$ = "[^0000FFSophie^000000]";
 		.var_name$ = "#CASHPOINTS";	// Point variable name
 		.exchange_rate = 20000;		// Amount of zeny to exchange per point
 		.exchange_min = 10;			// Minimum points required to exchange
 		
 		// Pub title
-		waitingroom strnpcinfo(1), 0;
+		// waitingroom strnpcinfo(1), 0;
 		end;
 
 }

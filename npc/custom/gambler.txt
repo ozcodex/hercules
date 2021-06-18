@@ -12,7 +12,7 @@ Changelog:
 v1.0 - First version.
 =========================================================*/
 
-prontera,164,169,3	script	Gambler	1_M_SMITH,{
+prontera,164,169,3	script	Gilbert	1_M_SMITH,{
 	
 	/*-----------------------------------------------------
 	Script

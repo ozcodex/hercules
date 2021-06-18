@@ -21,7 +21,7 @@
 //=     character deletion bug [AnnieRuru]
 //============================================================
 
-prontera,152,187,6	script	Hunting Missions	4_F_EDEN_MASTER,{
+prontera,152,187,6	script	Halter	4_F_EDEN_MASTER,{
 function Chk; function Cm;
 	mes "[Hunting Missions]";
 	mes "Hello, "+strcharinfo(PC_NAME)+"!";
