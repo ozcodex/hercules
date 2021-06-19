@@ -320,11 +320,11 @@ OnInit:
 		18534,250; //Fancy Phantom Mask
 	}else{
 	setarray .Shop[0],
-		5447,150 //Frog Hat
-		18555,225 // General Helmet
-		5660,300 // Gryphon Hat
-		18572,275 // Korean Judge Hat
-		5527, 200 // Lunatic Hat
+		5447,150, //Frog Hat
+		18555,225, // General Helmet
+		5660,300, // Gryphon Hat
+		18572,275, // Korean Judge Hat
+		5527, 200, // Lunatic Hat
 		5315,30, //observer
 		5312,100, //ayotaya kings
 		5476,125, //Grand Peco Hairband
