@@ -122,5 +122,30 @@ WHERE id = 5548;
 
 /*Toast*/
 UPDATE item_db
-SET script = 'bonus bMaxHP,100; bonus2 bAddMonsterDropItem,617,10;'
-WHERE id =5391 ;
+SET script = 'bonus bMaxHP,100;'
+WHERE id = 5107;
+
+/*Lord of Death*/
+UPDATE item_db
+SET script = 'bonus bMdef,5; .@r = getrefine(); bonus2 bAddClass,Class_Boss,(.@r>5?.@r+5:10); bonus2 bMagicAddClass,Class_Boss,(.@r>5?.@r+5:10); bonus2 bSubClass,Class_Normal,-5;'
+WHERE id = 18574;
+
+/*Shield Of Death*/
+UPDATE item_db
+SET script = 'bonus2 bAddClass,Class_Boss,2; bonus2 bMagicAddClass,Class_Boss,2; bonus2 bSubClass,Class_Normal,-10;'
+WHERE id = 2177;
+
+/*Witch's Pumpkin Hat*/
+UPDATE item_db
+SET script = 'bonus bMdef,10; bonus bStr,2; bonus bInt,2; bonus2 bMagicAddRace,RC_Undead,15; bonus2 bMagicAddRace,RC_Undead,15; bonus2 bMagicAddRace,RC_Demon,15; bonus2 bMagicAddRace,RC_Demon,15;'
+WHERE id = 18656;
+
+/*Gozarian Mask*/
+UPDATE item_db
+SET script = 'bonus bAllStats,1;'
+WHERE id = 5475;
+
+/*Hahoe Mask*/
+UPDATE item_db
+SET script = 'if(BaseClass==Job_Taekwon){ bonus bLuk,1; bonus bFlee2,2;'
+WHERE id = 5176;
