@@ -170,7 +170,6 @@ Mission_Status:
 	set .@Base_Exp, #Mission_Count*.@j[.Quests+1]/5;
 	set .@Job_Exp, #Mission_Count*.@j[.Quests+2]/5;
 	set .@zeny, #Mission_Count*.Quests*.@j[.@i]*.Modifier[2];
-	setd("#CASHPOINTS"), getd("#CASHPOINTS") + 20;
 
 	next;
 	mes "[Hunting Missions]";
@@ -192,6 +191,7 @@ Mission_Status:
 	set BaseExp, BaseExp+.@Base_Exp;
 	set JobExp, JobExp+.@Job_Exp;
 	Zeny += .@zeny;
+	setd("#CASHPOINTS"), getd("#CASHPOINTS") + 20;
 	for(set .@i,0; .@i<.Quests; set .@i,.@i+1) {
 		setd "Mission"+.@i,0;
 		setd "Mission"+.@i+"_",0;
