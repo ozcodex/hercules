@@ -149,3 +149,8 @@ WHERE id = 5475;
 UPDATE item_db
 SET script = 'if(BaseClass==Job_Taekwon){ bonus bLuk,1; bonus bFlee2,2;'
 WHERE id = 5176;
+
+/*Cat Ear Beret*/
+UPDATE item_db
+SET script = 'bonus2 bAddClass,Class_All,5; .@r = getrefine(); if(.@r < 5) .@r = 5; bonus2 bSubRace,RC_DemiHuman,(.@r - 5); bonus2 bAddRace,RC_DemiHuman,(.@r - 5); bonus2 bSubRace,RC_Player,(.@r - 5); bonus2 bAddRace,RC_Player,(.@r - 5);'
+WHERE id = 18600;
