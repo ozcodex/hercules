@@ -331,7 +331,7 @@ OnInit:
 		5815,100, //classic hat
 		5679,175, //Engineer Cap
 		5388,150, //Snake Hat
-		18534,250; //Fancy Phantom Mask
+		18600,250; //Cat Ear Beret
 	}
 	set .Blacklist$,	// Blacklisted mob IDs.
 		"1062,1088,1183,1186,1200,1212,1220,1221,1234,1235,"+
