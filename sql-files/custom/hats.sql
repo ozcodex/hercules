@@ -154,3 +154,8 @@ WHERE id = 5176;
 UPDATE item_db
 SET script = 'bonus2 bAddClass,Class_All,5; .@r = getrefine(); if(.@r < 5) .@r = 5; bonus2 bSubRace,RC_DemiHuman,(.@r - 5); bonus2 bAddRace,RC_DemiHuman,(.@r - 5); bonus2 bSubRace,RC_Player,(.@r - 5); bonus2 bAddRace,RC_Player,(.@r - 5);'
 WHERE id = 18600;
+
+/*Alice Doll*/
+UPDATE item_db
+SET script = 'bonus bStr,1; bonus2 bAddRace,RC_DemiHuman,10; bonus2 bAddRace,RC_Player,10; bonus2 bAddEff2,Eff_Sleep,10;'
+WHERE id = 5137;
