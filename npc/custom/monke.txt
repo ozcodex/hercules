@@ -35,11 +35,13 @@ prt_fild03,203,41,3	script	Monke	YOYO,{
 			.@amount = rand(1,.@price);
 			delitem "Banana", .@price;
 			.@chance = rand(1,100);
-			if (.@chance <= 50){
+			if (.@chance <= 40){
 				mes "* happy monkey noise *";
-			}else if(.@chance<75){
+			}else if(.@chance<70){
+				mes "* happy monkey noise *";
 			  getitem "Banana",.@amount;
 			}else if(.@chance<90){
+				mes "* happy monkey noise *";
 			  getitem "Strawberry",.@amount;
 			}else{
 			  getitem "Grape",.@amount;
