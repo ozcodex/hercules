@@ -29,6 +29,7 @@ prontera,164,169,3	script	Gilbert	1_M_SMITH,{
 			// Check total against inventory
 			if (countitem(.pod_id) < 1) {
 				mes "You don't have enough "+.pod_name$;
+        break;
 			}
 			.@chance = rand(1,100);
 			.@reward = .pod_id;

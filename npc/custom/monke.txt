@@ -1,0 +1,67 @@
+/*=========================================================
+Item Gambler
+by Ozcodex
+===========================================================
+Description:
+Exchanges bananas for random fruits
+===========================================================
+Compatibility:
+Optimised for Hercules emulators.
+===========================================================
+Changelog:
+v1.0 - First version.
+=========================================================*/
+
+prt_fild03,203,41,3	script	Monke	YOYO,{
+	
+	/*-----------------------------------------------------
+	Script
+	-----------------------------------------------------*/
+	mes .npc_name$;
+  mes "hoo hoo uuh uuh";
+  mes "uuh ooh huu oo uuh";
+  mes "* more monkey gibber*";
+	next;
+	
+	switch (select("ooh?","uuh!")) {
+		case 1:
+			mes .npc_name$;
+			.@price = rand(1,15);
+			// Check total against inventory
+			if (countitem("Banana") < .@price) {
+				mes "* angry monkey noise *";
+        break;
+			}
+			.@amount = rand(1,.@price);
+			delitem "Banana", .@price;
+			.@chance = rand(1,100);
+			if (.@chance <= 50){
+				mes "* happy monkey noise *";
+			}else if(.@chance<75){
+			  getitem "Banana",.@amount;
+			}else if(.@chance<90){
+			  getitem "Strawberry",.@amount;
+			}else{
+			  getitem "Grape",.@amount;
+			}
+			mes "ooh uuh hoo oo ";
+			mes "*more monkey gibberish*";
+			break;	
+
+		case 2:
+			mes .npc_name$;
+			mes "* angry monkey noise *";
+			break;	
+		}
+		
+		close;
+	
+	
+	/*-----------------------------------------------------
+	Configuration
+	-----------------------------------------------------*/
+	OnInit:
+		.npc_name$ = "[^0000FFMonke^000000]";
+		end;
+	
+}
