@@ -70,11 +70,6 @@ UPDATE item_db
 SET script = 'bonus bMdef,3; bonus bFlee,3; bonus2 bAddEle,Ele_Water,10; bonus2 bSubRace,RC_Fish,10;'
 WHERE id = 5510;
 
-/*Flame Dragon Armor*/
-UPDATE item_db
-SET script = '.@r = getrefine(); if (.@r>=9) .@val = 20; else if (.@r>=7) .@val = 10; bonus bAllStats,1; bonus bHit,10+.@val; bonus2 bAddClass,Class_Boss,.@val;'
-WHERE id = 15175;
-
 /*Observer*/
 UPDATE item_db
 SET script = 'skill "WZ_ESTIMATION",1;'
@@ -152,7 +147,7 @@ WHERE id = 5176;
 
 /*Cat Ear Beret*/
 UPDATE item_db
-SET script = 'bonus2 bAddClass,Class_All,5; .@r = getrefine(); if(.@r < 5) .@r = 5; bonus2 bSubRace,RC_DemiHuman,(.@r - 5); bonus2 bAddRace,RC_DemiHuman,(.@r - 5); bonus2 bSubRace,RC_Player,(.@r - 5); bonus2 bAddRace,RC_Player,(.@r - 5);'
+SET script = 'bonus bAtkRate,5; if(getrefine()>5) { bonus2 bAddRace,RC_DemiPlayer,getrefine(); bonus2 bAddRaceTolerance,RC_DemiPlayer,getrefine(); }'
 WHERE id = 18600;
 
 /*Alice Doll*/
