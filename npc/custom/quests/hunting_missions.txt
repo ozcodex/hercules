@@ -305,24 +305,24 @@ OnInit:
 	setarray .Modifier[0],	// Multipliers for Base Exp, Job Exp, and Zeny rewards.
 		getbattleflag("base_exp_rate")/100,getbattleflag("job_exp_rate")/100,60;
 	setarray .Shop[0],	// Reward items: <ID>,<point cost> (about 10~20 points per hunt).
-		5315,30, //observer
-		5312,100, //ayotaya kings
-		5815,100, //classic hat
-		5476,125, //Grand Peco Hairband
-		5388,150, //Snake Hat
-		5447,150, //Frog Hat
-		5679,175, //Engineer Cap
-		5527, 200, // Lunatic Hat
-		18555,225, // General Helmet
-		5383,250, //Hunter Cap
-		18600,250, //Cat Ear Beret
-		18534,250, //Fancy Phantom Mask
-		18572,275, // Korean Judge Hat
-		18597,300, //mercury riser
-		18508,300, //garuda hat
-		5660,300, // Gryphon Hat
-		18522,350, //evil marching hat
-		5565,500; //Dragon Arhat Mask
+		5315,20, //observer
+		5312,70, //ayotaya kings
+		5815,70, //classic hat
+		5476,90, //Grand Peco Hairband
+		5388,110, //Snake Hat
+		5447,110, //Frog Hat
+		5679,130, //Engineer Cap
+		5527,150, // Lunatic Hat
+		18555,160, // General Helmet
+		5383,180, //Hunter Cap
+		18600,180, //Cat Ear Beret
+		18534,180, //Fancy Phantom Mask
+		18572,200, // Korean Judge Hat
+		18597,220, //mercury riser
+		18508,220, //garuda hat
+		5660,220, // Gryphon Hat
+		18522,260, //evil marching hat
+		5565,370; //Dragon Arhat Mask
 	
 	set .Blacklist$,	// Blacklisted mob IDs.
 		"1062,1088,1183,1186,1200,1212,1220,1221,1234,1235,"+
