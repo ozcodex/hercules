@@ -24,7 +24,7 @@
 prontera,152,187,6	script	Halter	4_F_EDEN_MASTER,{
 function Chk; function Cm;
 	mes "[Hunting Missions]";
-	mes "Hello, "+strcharinfo(PC_NAME)+"!";
+  mes "Hello, "+strcharinfo(PC_NAME)+"!"; 
 	if (!#Mission_Delay) {
 		next;
 		mes "[Hunting Missions]";
@@ -304,35 +304,26 @@ OnInit:
 		40,70;
 	setarray .Modifier[0],	// Multipliers for Base Exp, Job Exp, and Zeny rewards.
 		getbattleflag("base_exp_rate")/100,getbattleflag("job_exp_rate")/100,60;
-	if(gettime(GETTIME_WEEKDAY) %2 == 0){
 	setarray .Shop[0],	// Reward items: <ID>,<point cost> (about 10~20 points per hunt).
 		5315,30, //observer
 		5312,100, //ayotaya kings
-		5476,125, //Grand Peco Hairband
-		5383,250, //Hunter Cap
-		5565,500, //Dragon Arhat Mask
 		5815,100, //classic hat
+		5476,125, //Grand Peco Hairband
+		5388,150, //Snake Hat
+		5447,150, //Frog Hat
 		5679,175, //Engineer Cap
+		5527, 200, // Lunatic Hat
+		18555,225, // General Helmet
+		5383,250, //Hunter Cap
+		18600,250, //Cat Ear Beret
+		18534,250, //Fancy Phantom Mask
+		18572,275, // Korean Judge Hat
 		18597,300, //mercury riser
 		18508,300, //garuda hat
-		5388,150, //Snake Hat
-		18522,350, //evil marching hat
-		18534,250; //Fancy Phantom Mask
-	}else{
-	setarray .Shop[0],
-		5447,150, //Frog Hat
-		18555,225, // General Helmet
 		5660,300, // Gryphon Hat
-		18572,275, // Korean Judge Hat
-		5527, 200, // Lunatic Hat
-		5315,30, //observer
-		5312,100, //ayotaya kings
-		5476,125, //Grand Peco Hairband
-		5815,100, //classic hat
-		5679,175, //Engineer Cap
-		5388,150, //Snake Hat
-		18600,250; //Cat Ear Beret
-	}
+		18522,350, //evil marching hat
+		5565,500; //Dragon Arhat Mask
+	
 	set .Blacklist$,	// Blacklisted mob IDs.
 		"1062,1088,1183,1186,1200,1212,1220,1221,1234,1235,"+
 		"1244,1245,1250,1268,1290,1293,1294,1296,1298,1299,"+
