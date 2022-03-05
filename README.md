@@ -1,34 +1,9 @@
 Hercules
 ========
 
-Build Status:
-[![Build Status](https://travis-ci.org/HerculesWS/Hercules.svg?branch=master)](https://travis-ci.org/HerculesWS/Hercules)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/cm9xbwurpbltqjop?svg=true)](https://ci.appveyor.com/project/Haru/hercules)
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/3892/badge.svg)](https://scan.coverity.com/projects/herculesws-hercules)
-[![GitLab Build Status](https://gitlab.com/HerculesWS/Hercules/badges/master/build.svg)](https://gitlab.com/HerculesWS/Hercules/commits/master)
-[![Coverage Report](https://gitlab.com/HerculesWS/Hercules/badges/master/coverage.svg)](https://gitlab.com/HerculesWS/Hercules/commits/master)
-[![Code Quality: Cpp](https://img.shields.io/lgtm/grade/cpp/g/HerculesWS/Hercules.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HerculesWS/Hercules/context:cpp)
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/HerculesWS/Hercules.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HerculesWS/Hercules/alerts)
-
-Issues and pull requests:
-[![Open Issues](https://img.shields.io/github/issues-raw/HerculesWS/Hercules.svg?label=Open%20Issues)](https://github.com/HerculesWS/Hercules/issues)
-[![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/HerculesWS/Hercules.svg?label=Open%20Pull%20Requests)](https://github.com/HerculesWS/Hercules/pulls)
-
-Development and Community:
-[![GitHub Repository](https://img.shields.io/badge/github-HerculesWS/Hercules-green.svg?logo=github)](https://github.com/HerculesWS/Hercules)
-[![Community Forum](https://img.shields.io/badge/forum-herc.ws-orange.svg)](http://herc.ws)
-[![IRC](https://img.shields.io/badge/IRC-Rizon/Hercules-yellow.svg)](irc://rizon.net/Hercules)
-[![Discord](https://img.shields.io/badge/discord-Hercules%20Emulator-7289da.svg)](https://discord.gg/rqCxS8p)
-[![Twitter](https://img.shields.io/badge/twitter-@HerculesWS-blue.svg?logo=twitter)](https://twitter.com/HerculesWS)
-
-Project Info:
-[![Release](https://img.shields.io/github/release/HerculesWS/Hercules.svg)](https://github.com/HerculesWS/Hercules/releases)
-![Language](https://img.shields.io/badge/language-C-yellow.svg)
-[![License](https://img.shields.io/badge/license-GPLv3-663399.svg)](https://github.com/HerculesWS/Hercules/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/HerculesWS/Hercules.svg)](https://github.com/HerculesWS/Hercules/graphs/contributors)
-
 Table of Contents
 ---------
+0. [Why this Fork?](#why-this-fork)
 1. [What is Hercules?](#what-is-hercules)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
@@ -36,6 +11,14 @@ Table of Contents
 5. [Helpful Links](#helpful-links)
 6. [More Documentation](#more-documentation)
 
+
+## Why this Fork?
+-----------------
+This fork was initially done by my brother and myself to have a LAN version
+of this game to play with our cousins and friends, but since we are few foes
+and this game is intended to be massive we need to make modifications and
+customizations to the  game, waiting to track and keep those changes we 
+decided to keep as a github repository.
 
 ## What is Hercules?
 -----------------
@@ -49,16 +32,8 @@ QA and support. Hercules is a continuation of the original Athena project.
 ## Prerequisites
 -------------
 Before installing Hercules, you will need to install certain tools and applications.
-This differs between the varying Operating Systems available, so the
-following list is broken down into Windows and Unix (incl. Linux) prerequisites.
 
-For a list of supported platforms, please refer to the [Supported Platforms](https://github.com/HerculesWS/Hercules/wiki/Supported-Platforms) wiki page.
-
-#### Windows
-  - [Git client](https://git-scm.com/)
-  - [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)
-
-#### Unix/Linux/BSD (names of packages may require specific version numbers on certain distributions)
+#### Unix/Linux/BSD 
   - git
   - gcc or clang (version 4.5 or newer, recommended 5.0 or newer)
   - GNU make
@@ -71,75 +46,16 @@ For a list of supported platforms, please refer to the [Supported Platforms](htt
       - requires the XML::Simple module, which in turn requires libexpat-dev
     - Doxygen (required to rebuild the HPM Hooks and HPMDataCheck)
 
-#### Mac OS X
-  - Xcode or the Xcode command-line tools.
-  - MySQL-compatible server (installation of `mysql` or `mariadb` through [Homebrew](http://brew.sh/) is recommended)
-  - PCRE library (installation of `pcre` through [Homebrew](http://brew.sh) is recommended)
-  - *Optional dependencies for development only*
-    - Doxygen (required to rebuild the HPM Hooks and HPMDataCheck)
-
-#### Optional, useful tools
-  - MySQL GUI clients
-    - [MySQL Workbench](http://www.mysql.com/downloads/workbench/) (cross-platform)
-    - [HeidiSQL](http://www.heidisql.com/) (Windows)
-    - [DBeaver](http://dbeaver.jkiss.org/) (cross-platform)
-    - [Sequel Pro](http://www.sequelpro.com/) (Mac OS X)
-       - *More options available at [mariadb.com](https://mariadb.com/kb/en/library/graphical-and-enhanced-clients/)*
-  - GUI Git clients
-    - [GitHub Desktop](https://desktop.github.com/) (cross-platform)
-    - [GitKraken](https://www.gitkraken.com/git-client) (cross-platform)
-    - [SmartGit](https://www.syntevo.com/smartgit/) (cross-platform)
-    - [Atlassian SourceTree](https://www.sourcetreeapp.com/) (Windows, Mac OS X)
-        - *More options available at [git-scm.com](https://git-scm.com/downloads/guis)*
-  - Text editors with syntax highlighting
-    - [Visual Studio Code](https://code.visualstudio.com) (cross-platform)
-    - [Atom](https://atom.io) (cross-platform)
-    - [Notepad++](https://notepad-plus-plus.org) (Windows)
-        - *More options available at [wikipedia.org](https://en.wikipedia.org/wiki/Comparison_of_text_editors#Overview)*
-
-
 ## Installation
 ------------
 
-This section is a very brief set of installation instructions. For more concise
-guides relevant to your Operation System, please refer to the Wiki (links at
-the end of this file).
+This are te steps we followed to instale the game, comes from the wiki guide:
+[Make your RO server in less then 5 minutes](https://herc.ws/board/topic/16607-ragnarok-offline-newbie-pack-2022-make-your-ro-server-in-less-then-5-minutes/)
 
-#### Windows
-##### Easy installation
-  1. Install the prerequisites.
-  2. Clone the [Hercules repository](https://github.com/HerculesWS/Hercules) using a git client, into a new
-     folder.
-      - If you do not want to use the command line, you can instead clone with [GitHub Desktop](https://desktop.github.com/).
-  3. Run `mariadb.bat` to automatically install and configure MariaDB.
-  4. Start Visual Studio and load the provided solution:
-      - Compile and run the three projects, login-server, char-server, map-server.
-##### Manual installation
-  1. Install the prerequisites.
-  2. Install a MySQL-compatible server, such as [MariaDB](https://mariadb.org/) (recommended) or [MySQL Community Edition](https://www.mysql.com/products/community/)
-  3. Clone the Hercules repository [Hercules repository](https://github.com/HerculesWS/Hercules) using a git client, into a new
-     folder.
-  4. Connect to the MySQL server as root:
-      - Create a database (hercules): `CREATE DATABASE hercules;`
-      - Create a user (hercules): `CREATE USER 'hercules'@'localhost' IDENTIFIED BY 'password';`.
-      - Give permissions (GRANT SELECT,INSERT,UPDATE,DELETE) to the user: `GRANT SELECT,INSERT,UPDATE,DELETE ON hercules.* TO 'hercules'@'localhost';`
-  5. Connect to the MySQL server as the new user:
-      - Import the .sql files in /sql-files/ into the new database.
-  6. Start Visual Studio and load the provided solution:
-      - Compile and run the three projects, login-server, char-server, map-server.
-
-#### Unix
-  1. Install the prerequisites through your distribution's package manager
-      - (Red Hat compatible / CentOS) `yum install gcc make mysql mysql-devel mysql-server pcre-devel zlib-devel git`
-      - (Debian compatible) `apt-get install gcc make libmysqlclient-dev zlib1g-dev libpcre3-dev mysql-server git`
-      - (FreeBSD) `pkg install clang35 gmake mysql56-server mysql-connector-c pcre git`
-      - (Mac OS X):
-          - Install Xcode through the Mac App Store
-          - Initialize the build tools through the Terminal `xcode-select --help`
-          - Install Homebrew as described on the project page
-          - Install the other prerequisites: `brew install mysql pcre`
-  2. Clone the Hercules repository `git clone https://github.com/HerculesWS/Hercules.git ~/Hercules`
-  3. Configure the MySQL server and start it.
+#### Linux
+  1. Install the prerequisites:
+      - `apt-get install gcc make libmysqlclient-dev zlib1g-dev libpcre3-dev mysql-server git`
+  3. Configure the MariaDB server and start it.
   4. Connect to the MySQL server as root:
       - Create a database (hercules): `CREATE DATABASE hercules;`
       - Create a user (hercules): `CREATE USER 'hercules'@'localhost' IDENTIFIED BY 'password';`.
