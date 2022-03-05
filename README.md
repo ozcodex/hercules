@@ -55,12 +55,12 @@ This are te steps we followed to instale the game, comes from the wiki guide:
       - `apt-get install gcc make libmysqlclient-dev zlib1g-dev libpcre3-dev mariadb-server git`
   3. Configure the MariaDB server and start it.
   4. Connect to the MariaDB server as root:
-      - Create a database (hercules): `CREATE DATABASE hercules;`
-      - Create a user (hercules): `CREATE USER 'hercules'@'localhost' IDENTIFIED BY 'password';`.
-      - Give permissions (GRANT SELECT,INSERT,UPDATE,DELETE) to the user: `GRANT SELECT,INSERT,UPDATE,DELETE ON hercules.* TO 'hercules'@'localhost';`
+      - Create a database (hercules): `CREATE DATABASE ragnarok;`
+      - Create a user (hercules): `CREATE USER 'ragnarok'@'localhost' IDENTIFIED BY 'evergreen viper crunchy nylon elliptic footgear';`.
+      - Give permissions to the user: `GRANT SELECT,INSERT,UPDATE,DELETE ON ragnarok.* TO 'ragnarok'@'localhost';`
   5. Connect to the MariaDB server as the new user:
       - Import the .sql files in /sql-files/ into the new database.
-      - `cat sql-files/*.sql | mariadb hercules`
+      - `cat sql-files/*.sql | mariadb ragnarok`
   6. Enter the Hercules directory and configure/build Hercules
       - `./configure`
       - `make clean && make sql`
